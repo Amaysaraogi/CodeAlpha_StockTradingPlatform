@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.File;
 
 public class TradingApp {
     private Map<String, Stock> market;
@@ -38,7 +39,7 @@ public class TradingApp {
 
     public void run() {
         while (true) {
-            System.out.println("\n📊 Stock Trading Menu:");
+            System.out.println("\nStock Trading Menu:");
             System.out.println("1. View Market");
             System.out.println("2. Buy Stock");
             System.out.println("3. Sell Stock");
@@ -83,7 +84,7 @@ public class TradingApp {
         String symbol = scanner.nextLine().toUpperCase();
         Stock stock = market.get(symbol);
         if (stock == null) {
-            System.out.println("⚠️ Invalid stock symbol.");
+            System.out.println("Invalid stock symbol.");
             return;
         }
 
